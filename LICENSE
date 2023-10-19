@@ -245,10 +245,26 @@ copyright notices, you must include the copyright notice for the Library among
 them, as well as a reference directing the user to the copy of this License.
 Also, you must do one of these things:
 
-    a) Accompany the work with the complete corresponding machine-readable source code for the Library including whatever changes were used in the work (which must be distributed under Sections 1 and 2 above); and, if the work is an executable linked with the Library, with the complete machine-readable "work that uses the Library", as object code and/or source code, so that the user can modify the Library and then relink to produce a modified executable containing the modified Library. (It is understood that the user who changes the contents of definitions files in the Library will not necessarily be able to recompile the application to use the modified definitions.)
-    b) Accompany the work with a written offer, valid for at least three years, to give the same user the materials specified in Subsection 6a, above, for a charge no more than the cost of performing this distribution.
-    c) If distribution of the work is made by offering access to copy from a designated place, offer equivalent access to copy the above specified materials from the same place.
-    d) Verify that the user has already received a copy of these materials or that you have already sent this user a copy.
+    a) Accompany the work with the complete corresponding machine-readable 
+	source code for the Library including whatever changes were used in the work
+	(which must be distributed under Sections 1 and 2 above); and, if the work 
+	is an executable linked with the Library, with the complete machine-readable
+	"work that uses the Library", as object code and/or source code, so that the
+	user can modify the Library and then relink to produce a modified executable
+	containing the modified Library. (It is understood that the user who changes
+	the contents of definitions files in the Library will not necessarily be
+	able to recompile the application to use the modified definitions.)
+
+    b) Accompany the work with a written offer, valid for at least three years, 
+	to give the same user the materials specified in Subsection 6a, above, for a 
+	charge no more than the cost of performing this distribution.
+
+    c) If distribution of the work is made by offering access to copy from a 
+	designated place, offer equivalent access to copy the above specified 
+	materials from the same place.
+
+    d) Verify that the user has already received a copy of these materials or 
+	that you have already sent this user a copy.
 
 For an executable, the required form of the "work that uses the Library" must
 include any data and utility programs needed for reproducing the executable from
