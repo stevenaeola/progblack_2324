@@ -1,4 +1,4 @@
-# DRAFT COMP1101 Programming (Black) Summative Assessment 1 DRAFT {data-background-color=#7E317B}
+## DRAFT COMP1101 Programming (Black) Summative Assessment 1 DRAFT {data-background-color=#7E317B}
 
 ---
 
