@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>PITCHME</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/simple.css" id="theme">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section>
+<section
+id="draft-comp1101-programming-black-summative-assessment-1-draft"
+class="title-slide slide level1" data-background-color="#7E317B">
+<h1 data-background-color="#7E317B">DRAFT COMP1101 Programming (Black)
+Summative Assessment 1 DRAFT</h1>
+
+</section>
+<section id="term-1-programming-exercise-outline" class="slide level2">
+<h2>Term 1 Programming Exercise Outline</h2>
+<ul>
+<li>Submission of code and video by 14:00 25 January 2024</li>
+<li>Submission of peer reviews by 14:00 8 February 2024</li>
+<li>Return by 23 February 2024</li>
+<li>Contributes 50% of module marks</li>
+<li>Includes peer review feedback which you will be allocated</li>
+<li>This is an individual piece of work</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="subject-specific-knowledge">Subject-specific Knowledge</h3>
+<ul>
+<li>Interaction between JavaScript programs and the Document Object
+Model (DOM)</li>
+<li>Using control statements to loop and make decisions</li>
+<li>An understanding of the nature of imperative programming in the
+object-oriented style</li>
+<li>A knowledge and understanding of good programming practice (for
+example, reuse, documentation and style)</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>Building collections of data within a program and using JavaScript
+Object Notation (JSON)</li>
+<li>Making programs robust through the use of exceptions and exception
+handling</li>
+<li>A knowledge and understanding of good programming practice (for
+example, reuse, documentation and style)</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="subject-specific-skills">Subject-Specific Skills</h3>
+<ul>
+<li>an ability to realise solutions to problems as working JavaScript
+programs</li>
+<li>an ability to apply reuse by exploiting predefined components</li>
+<li>an ability to use software tools related to programming (programming
+environments, code management, documentation tools, etc.)</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="key-skills">Key Skills</h3>
+<ul>
+<li>an ability to communicate technical information</li>
+<li>an ability to recognise and apply the principles of abstraction and
+modelling</li>
+</ul>
+</section>
+<section id="task-summary" class="slide level2">
+<h2>Task summary</h2>
+<ul>
+<li>Construct a dynamic web site for an application of your
+choosing</li>
+<li>Use static HTML pages loading dynamic JSON content from server via
+AJAX</li>
+<li>Server written in nodejs to provide JSON through REST API</li>
+<li>Prepare a 2 minute video demonstrating your code</li>
+<li>Do a code quality review of four other submissions</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="dynamic-web-site">Dynamic web site</h3>
+<ul>
+<li>Choose any application domain as long as it includes at least two
+kinds of entity e.g.
+<ul>
+<li>pictures</li>
+<li>people</li>
+<li>places</li>
+<li>events</li>
+<li>comments</li>
+</ul></li>
+<li>Could be e.g. club, social, health, gallery</li>
+<li>If you are not sure then ask me</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="static-html-loading-json-via-ajax">Static HTML loading JSON via
+AJAX</h3>
+<ul>
+<li>‘Single page app’: page content loaded as JSON via AJAX</li>
+<li>Can have more than one page e.g. for user and admin</li>
+<li>Should provide clean and simple User Experience (UX)</li>
+<li>Should be responsive i.e. work well on desktop and mobile</li>
+<li>Recommend using front-end framework such as Bootstrap,
+Foundation</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="message-sequence-chart">Message sequence chart</h4>
+<figure>
+<img
+data-src="https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgQ2xpZW50L3NlcnZlciBpbnRlcmFjdGlvbgoKABUGLT5TABcFOiBTdGF0aWMgcGFnZSByZXF1ZXN0CgAWBi0-AEEGOiBIVE1MCmxvb3AgZWFjaCB1c2VyIABJBwA_EER5bmFtaWMgY29udGVudABLCCAoQUpBWCkASRFKU09OAIEKCQBnCFJlbmRlcgAXBQA_CWFzAIEBBSB3aXRoaW4gRE9NCmVuZAoK&amp;s=roundgreen"
+alt="Message Sequence Chart showing Client server interaction with AJAX" />
+<figcaption aria-hidden="true">Message Sequence Chart showing Client
+server interaction with AJAX</figcaption>
+</figure>
+</section>
+<section class="slide level2">
+
+<h3 id="server-provides-json-through-a-rest-api">Server provides JSON
+through a REST API</h3>
+<p>Each entity type (e.g. picture) has</p>
+<ul>
+<li>GET method to list/search (returns a list of ids and names)</li>
+<li>GET method for individual details (includes details of related
+entities)</li>
+<li>POST method to add new entity</li>
+<li>Document your API in the style of the <a
+href="https://developer.twitter.com/en/docs/twitter-api/api-reference-index">Twitter
+API</a></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>Response provided as JSON</li>
+<li>Content-type needs to be correct</li>
+<li>HTTP codes should be correct: use 200, 400 or 403 (if using
+authentication)</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="server-written-in-nodejs">Server written in nodejs</h3>
+<ul>
+<li>Use npm for management</li>
+<li>Make sure you use –save or –save-dev option with packages you
+add</li>
+<li>Write jest test cases: run with <code>npm test</code></li>
+<li>Use eslint: run with <code>npm run pretest</code></li>
+<li>Recommend using express</li>
+</ul>
+</section>
+<section id="submission" class="slide level2">
+<h2>Submission</h2>
+<p>Source code (all zipped)</p>
+<ul>
+<li>HTML and CSS and any media</li>
+<li>Client and server side JavaScript</li>
+<li>package.json including test and pretest scripts</li>
+<li>.eslintrc</li>
+<li>jest test cases e.g. app.test.js</li>
+<li>documentation of API</li>
+<li>demonstration video</li>
+</ul>
+<p>Should not include <code>node_modules</code> in submission</p>
+</section>
+<section id="assessment-criteria" class="slide level2">
+<h2>Assessment Criteria</h2>
+<p>Equally weighted 9% each</p>
+<ul>
+<li>Client-side functionality</li>
+<li>Client-side quality</li>
+<li>Server-side functionality</li>
+<li>Server-side quality</li>
+<li>Video presentation</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="client-side-functionality-criteria">Client-side functionality
+criteria</h3>
+<ul>
+<li>User Experience (UX): clean layout and minimal clicks/entry
+required</li>
+<li>App complexity: entities can be listed and edited</li>
+<li>‘Single page’ style: asynchronous updates</li>
+<li>Staff reviewed</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="client-side-quality-criteria">Client-side quality criteria</h3>
+<ul>
+<li>Standards compliant (HTML5)</li>
+<li>Responsive to different viewport sizes</li>
+<li>Gracefully handles server disconnection
+<ul>
+<li>useful error messages</li>
+<li>recommences on server restart</li>
+</ul></li>
+<li>Peer reviewed; staff moderated</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="server-side-functionality-criteria">Server-side functionality
+criteria</h3>
+<ul>
+<li>More than one entity type, with relationships</li>
+<li>REST API provides each entity with appropriate GET/POST methods</li>
+<li>Installs with <code>npm install</code></li>
+<li>Starts with <code>npm start</code></li>
+<li>Staff reviewed</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="server-side-quality-criteria">Server-side quality criteria</h3>
+<ul>
+<li>Successful eslint (run with <code>npm run pretest</code>)</li>
+<li>Successful jest tests with good coverage (run with
+<code>npm test</code>)</li>
+<li>Testing includes content-type and HTTP code</li>
+<li>Completeness of API documentation</li>
+<li>Peer reviewed; staff moderated</li>
+</ul>
+</section>
+<section id="video-presentation" class="slide level2">
+<h2>Video Presentation</h2>
+<ul>
+<li>Submit a 2 minute (max) video demonstrating your software</li>
+<li>Include demonstration of how to start the program</li>
+<li>All functionality will be assessed by what is demonstrated in the
+video</li>
+<li>If it is not demonstrated in the video, you will not get a mark for
+it</li>
+<li>Quality of video presentation will be marked separately from
+functionality:
+<ul>
+<li>Structure; Visual Presentation; Audio explanation</li>
+</ul></li>
+<li>Lose 10% of marks for every 10 seconds over 2 minutes</li>
+<li>Staff reviewed</li>
+</ul>
+</section>
+<section id="peer-review-marking" class="slide level2">
+<h2>Peer Review Marking</h2>
+<p>5% of the module marks are awarded for peer assessment</p>
+<ul>
+<li>2 marks for completion of four peer reviews</li>
+<li>3 marks for the accuracy of the reviews</li>
+<li>Accuracy is based on agreement with peers</li>
+<li>Accuracy marks deducted for being over-harsh and over-generous</li>
+<li>The average student tends to get about 65%</li>
+<li>65% is on the good/very good boundary of the <a
+href="https://www.dur.ac.uk/media/durham-university/governance/programme-regulations/undergraduate/coreregsug.pdf">marking
+conventions</a> p15</li>
+</ul>
+</section>
+<section id="how-to-do-the-assignment" class="slide level2">
+<h2>How to do the assignment</h2>
+<ul>
+<li>Design HTML</li>
+<li>Design web service</li>
+<li>Join with Fetch</li>
+<li>Read the <a href="FAQ.md">FAQ</a></li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
