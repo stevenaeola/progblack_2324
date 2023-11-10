@@ -74,3 +74,14 @@
 .bd-mode-toggle .dropdown-menu .active .bi {
     display: block !important;
 }
+
+nav {
+    & a{
+      background-color: cornflowerblue;
+      color: black;
+      padding: 0.5%;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    padding-left: 18%;
+    padding-top: 3%;
+  }
