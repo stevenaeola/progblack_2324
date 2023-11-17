@@ -1,3 +1,4 @@
 .DS_Store
 package-lock.json
 examples/node_modules/
+gordonramsay/node_modules
