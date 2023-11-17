@@ -1,0 +1,14 @@
+{
+  "name": "examples",
+  "version": "0.1.0",
+  "description": "Starting off with express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "anton.a.egorov@durham.ac.uk",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
