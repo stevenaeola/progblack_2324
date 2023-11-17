@@ -12,6 +12,17 @@ app.get("/fact", function (request, response){
     response.send(facts[factNumber].text);
 })
 
+app.get("/facts/", function (request, response){
+    let tag = request.query.tag;
+    let results = [];
+    for (let fact of facts){
+        if(fact.tags.includes(tag)){
+            results.push(fact.text);
+        }
+    }
+    response.send(results);
+})
+
 app.get("/tags", function (request, response){
     let tags = [];
     for(let fact of facts){
