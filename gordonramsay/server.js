@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+app.use(express.static('client'));
 
 let facts = [
     {"text": "Played for St Kilda", "tags": ["geography", "history"]},
