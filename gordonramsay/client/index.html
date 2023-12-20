@@ -87,7 +87,6 @@
   <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
     <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
       <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-      <span class="fs-4"></span>
     </a>
   </header>
 
@@ -107,14 +106,32 @@
         <div class="row" id="tag-button-container">
         </div>
       </div>
-    <form id="facts-form" action="http://localhost:8080/facts">
-      <input id="facts-tag" name="tag"></input>
+      <h2>Search for facts by tag</h2>
+    <form id="search-fact-form">
+      <input id="fact-tag" name="tag">
     </form>
-    </P>
+
     <div class="row g-5">
       <div class="col-md-6" id="facts-container">
       </div>
     </div>
+
+    <h2>Add a new fact</h2>
+    <form id="new-fact-form">
+
+<!--  from https://getbootstrap.com/docs/4.0/components/forms/ -->
+      <div class="form-group">
+        <label for="new-fact-text">Factoid</label>
+        <input type="text" class="form-control" name="new-fact-text">
+      </div>
+
+      <div class="form-group">
+        <label for="new-fact-tag">Tag</label>
+        <input type="text" class="form-control" name="new-fact-tag">
+      </div>
+      <button type="submit" class="btn btn-primary">Add fact</button>
+    </form>
+
   </main>
   <footer class="pt-5 my-5 text-body-secondary border-top">
     Created by the Bootstrap team &middot; &copy; 2023
@@ -122,6 +139,6 @@
 </div>
 <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 <script src="facts-search.js"></script>
-
+<script src="fact-submit.js"></script>
     </body>
 </html>

@@ -13,12 +13,12 @@ async function loadTaggedFacts(tag){
   }
 }
 
-let ff = document.getElementById("facts-form")
+let ff = document.getElementById("search-fact-form")
 
 ff.addEventListener('submit', async function(event){
     event.preventDefault();
     try{
-      let tag = document.getElementById("facts-tag").value;
+      let tag = document.getElementById("fact-tag").value;
       loadTaggedFacts(tag);
     } catch(e) {
       alert(e);
@@ -30,6 +30,7 @@ ff.addEventListener('submit', async function(event){
     if(response.ok){
       let tags = await response.json();
       let container = document.getElementById("tag-button-container");
+      container.innerHTML = '';
       for(let tag of tags){
         container.innerHTML += `<div class="col"><button class="btn btn-secondary tag-button">${tag}</button></div>`;
       }
