@@ -3,7 +3,7 @@
 
 ---
 
-## Term 2 Programming Exercise Outline DRAFT
+## Term 2 Programming Exercise Outline
 
 - Submission by 14:00 25 April 2024
 - Return after end of exam period
